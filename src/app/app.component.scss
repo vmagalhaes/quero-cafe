@@ -1,0 +1,21 @@
+#choosen {
+  animation: showup 3s 1;
+}
+
+#dots {
+  animation: blink 2s infinite;
+}
+
+@keyframes showup {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes blink {
+  0% {opacity:0;}
+  20% {opacity:1;}
+  40% {opacity:0;}
+  60% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:1;}
+}

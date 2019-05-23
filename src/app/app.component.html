@@ -1,0 +1,19 @@
+<div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+  <div style="text-align:center;">
+    <img width="500" alt="Angular Logo" src="assets/quero_cafe.png">
+  </div>
+  <div style="text-align:center; width: 100%">
+    <div>
+      <div style="margin-top: 30px; margin-left: 80px; border: 3px solid #522137; display: inline-block; width: 500px; height: 30px;">
+        <div id="progress-bar" style="width: 500px; height: 30px;background-color: #D3A982;"></div>
+      </div>
+      <span style="font-size: 35px; position: relative; top: -5px; left: 15px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">{{ loadingSize }}</span>
+    </div>
+    <p style="font-size: 40px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">
+      <span id="choosen" *ngIf="choosen">{{ choosen | uppercase }}</span>
+      <span *ngIf="!choosen">Escolhendo<span id="dots">...</span></span>
+    </p>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

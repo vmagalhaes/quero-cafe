@@ -2,6 +2,23 @@
   animation: showup 1s 1;
 }
 
+button {
+  background-color: #d3a982;
+  border: 5px solid #522136;
+  color: #522236;
+  padding: 15px 64px;
+  font-size: 30px;
+  font-family: Helvetica;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: all 1s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #d3a982;
+  }
+}
+
 #dots {
   animation: blink 2s infinite;
 }

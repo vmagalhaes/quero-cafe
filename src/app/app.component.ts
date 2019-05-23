@@ -29,28 +29,17 @@ export class AppComponent {
   ];
 
   ngOnInit() {
+
+  }
+
+  sort() {
     this.audio = document.createElement("audio");
     this.audio.src = "assets/piao-do-bau-com-musica.mp3";
     this.audio.volume = 0.06;
-    this.audio.muted = true;
     this.audio.play();
-    this.audio.muted = false;
-
-    fetch('assets/piao-do-bau-com-musica.mp3')
-    .then(response => response.blob())
-    .then(blob => {
-      this.audio.srcObject = blob;
-    })
-    .then(_ => {
-      // Video playback started ;)
-    })
-    .catch(e => {
-      // Video playback failed ;(
-    })
 
     const elem = document.getElementById("progress-bar");
     let width = 1;
-
 
     const frame = () => {
       if (width >= 100) {

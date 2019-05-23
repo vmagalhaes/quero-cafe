@@ -3,16 +3,21 @@
     <img width="500" alt="Angular Logo" src="assets/quero_cafe.png">
   </div>
   <div style="text-align:center; width: 100%">
-    <div>
-      <div style="margin-top: 30px; margin-left: 80px; border: 3px solid #522137; display: inline-block; width: 500px; height: 30px;">
-        <div id="progress-bar" style="width: 500px; height: 30px;background-color: #D3A982;"></div>
+    <div [hidden]="!audio">
+      <div>
+        <div style="margin-top: 30px; margin-left: 80px; border: 3px solid #522137; display: inline-block; width: 500px; height: 30px;">
+          <div id="progress-bar" style="width: 500px; height: 30px;background-color: #D3A982;"></div>
+        </div>
+        <span style="font-size: 35px; position: relative; top: -5px; left: 15px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">{{ loadingSize }}</span>
       </div>
-      <span style="font-size: 35px; position: relative; top: -5px; left: 15px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">{{ loadingSize }}</span>
+      <p style="font-size: 55px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">
+        <span id="choosen" *ngIf="choosen">{{ choosen | uppercase }}</span>
+        <span *ngIf="!choosen">{{ 'Escolhendo' | uppercase }}<span id="dots">...</span></span>
+      </p>
     </div>
-    <p style="font-size: 55px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">
-      <span id="choosen" *ngIf="choosen">{{ choosen | uppercase }}</span>
-      <span *ngIf="!choosen">{{ 'Escolhendo' | uppercase }}<span id="dots">...</span></span>
-    </p>
+    <div [hidden]="audio">
+      <button (click)="sort()">SORTEAR</button>
+    </div>
   </div>
 </div>
 <span style="position: fixed;bottom: 0;right: 0;font-size: 13px;padding: 4px 7px;background-color: #ecececbd;color: #bfbfbf;">Desenvolvido pela necessidade diária de um café.</span>

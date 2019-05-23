@@ -17,7 +17,10 @@ export class AppComponent {
     "Edinilton",
     "Maurício",
     "Akira",
-    "Nilson"
+    "Nilson",
+    "Danilo",
+    "Ailton",
+    "Antônio"
   ];
 
   ngOnInit() {

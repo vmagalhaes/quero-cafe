@@ -9,11 +9,12 @@
       </div>
       <span style="font-size: 35px; position: relative; top: -5px; left: 15px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">{{ loadingSize }}</span>
     </div>
-    <p style="font-size: 40px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">
+    <p style="font-size: 55px; font-weight: bold; font-family: Helvetica; margin-top: 20px; color: #522137;">
       <span id="choosen" *ngIf="choosen">{{ choosen | uppercase }}</span>
       <span *ngIf="!choosen">{{ 'Escolhendo' | uppercase }}<span id="dots">...</span></span>
     </p>
   </div>
 </div>
+<span style="position: fixed;bottom: 0;right: 0;font-size: 13px;padding: 4px 7px;background-color: #ecececbd;color: #bfbfbf;">Desenvolvido pela necessidade diária de um café.</span>
 
 <router-outlet></router-outlet>

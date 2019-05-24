@@ -18,7 +18,12 @@ export class AppComponent {
   people: String[] = [
     "Victor",
     "Jéssica",
-    "João",
+    "Jéssica",
+    "Jéssica",
+    "Jéssica",
+    "Jéssica",
+    "Jéssica",
+    "Jéssica",
     "Edinilton",
     "Maurício",
     "Akira",

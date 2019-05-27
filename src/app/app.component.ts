@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -44,8 +45,8 @@ export class AppComponent {
     const frame = () => {
       if (width >= 100) {
         clearInterval(id);
-        console.log(Math.floor(Math.random() * this.people.length))
-        this.choosen = this.people[Math.floor(Math.random() * this.people.length)];
+        console.log(_.random(0, (this.people.length - 1)))
+        this.choosen = this.people[_.random(0, (this.people.length - 1))];
         this.audio.pause();
 
         const audioCoffee = document.createElement("audio");

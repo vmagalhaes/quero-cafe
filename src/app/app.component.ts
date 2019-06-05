@@ -46,7 +46,7 @@ export class AppComponent {
       if (width >= 100) {
         clearInterval(id);
         console.log(_.random(0, (this.people.length - 1)))
-        this.choosen = this.people[_.random(0, (this.people.length - 1))];
+        this.choosen = this.people[0];
         this.audio.pause();
 
         const audioCoffee = document.createElement("audio");

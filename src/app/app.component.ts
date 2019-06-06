@@ -25,6 +25,7 @@ export class AppComponent {
     "Akira",
     "Nilson",
     "Danilo",
+    "André",
     "Ailton",
     "Antônio"
   ];

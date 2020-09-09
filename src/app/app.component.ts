@@ -18,7 +18,7 @@ export class AppComponent {
   choosen: String;
   people: String[] = [
     "Victor",
-    "Jéssica",
+    "Tetinha",
     "João",
     "Edinilton",
     "Maurício",
